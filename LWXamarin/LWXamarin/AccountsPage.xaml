@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="LWXamarin.AccountsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#a8a8a8" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="fieldStyle" TargetType="Label">
+                <Setter Property="TextColor">
+                    <OnPlatform x:TypeArguments="Color" iOS="Black" Android="Black" WinPhone="Black" />
+                </Setter>
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="fieldView" TargetType="ContentView">
+                <Setter Property="Padding" Value="10,0,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <!--<StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                        <Label Text="Search by Zip Code" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+                        <Label x:Name="zipCodeLabel" Text="Zip Code" Style="{StaticResource labelStyle}" />
+                        <Entry x:Name="zipCodeEntry" />
+                    </StackLayout>-->
+                    <StackLayout Padding="0,0,0,10" VerticalOptions="CenterAndExpand">
+                        <Button x:Name="getMainBtn" Text="Home" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                        <Button x:Name="getAccountsBtn" Text="Get Accounts" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <ListView x:Name="MyAccountView"
+                    ItemsSource="{Binding Accounts}"
+                    ItemTapped="Handle_ItemTapped"
+                    CachingStrategy="RecycleElement">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Id}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}" />
+                                    <Label Text="Name:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Name}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Initial Balance:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding InitialBalance}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Current Balance:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding CurrentBalance}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Reconciled Balance:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding ReconciledBalance}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Low Balance Warning:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding LowBalanceWarning}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Created:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Created}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Household Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding HouseholdId}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="{Binding .}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>   

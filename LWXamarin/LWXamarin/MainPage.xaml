@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LWXamarin"
+             x:Class="LWXamarin.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#a8a8a8" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="fieldStyle" TargetType="Label">
+                <Setter Property="TextColor">
+                    <OnPlatform x:TypeArguments="Color" iOS="Black" Android="Black" WinPhone="Black" />
+                </Setter>
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="fieldView" TargetType="ContentView">
+                <Setter Property="Padding" Value="10,0,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Welcome to LWXamarin!" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Padding="0,0,0,10" VerticalOptions="CenterAndExpand">
+                        <Button x:Name="getHouseholdsBtn" Text="Households" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                        <Button x:Name="getAccountsBtn" Text="Accounts" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                        <Button x:Name="getAccountDetailsBtn" Text="Account Details" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                        <Button x:Name="getTransactionsBtn" Text="Transactions" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

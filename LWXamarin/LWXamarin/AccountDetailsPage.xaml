@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                x:Class="LWXamarin.AccountDetailsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#a8a8a8" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="fieldStyle" TargetType="Label">
+                <Setter Property="TextColor">
+                    <OnPlatform x:TypeArguments="Color" iOS="Black" Android="Black" WinPhone="Black" />
+                </Setter>
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="fieldView" TargetType="ContentView">
+                <Setter Property="Padding" Value="10,0,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                        <Label Text="Search by Account Id" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+                        <Label x:Name="accountIdLabel" Text="Account Id" Style="{StaticResource labelStyle}" />
+                        <Entry x:Name="accountIdEntry" />
+                    </StackLayout>
+                    <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+                        <Button x:Name="getMainBtn" Text="Home" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                        <Button x:Name="getAccountDetailsBtn" Text="Get Account Details" WidthRequest="185" BorderWidth="1">
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                    <Label Text="Id:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label Text="{Binding Id}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Name:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="nameLabel" Text="{Binding Name}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Initial Balance:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="initialBalanceLabel" Text="{Binding InitialBalance}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Current Balance:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="currentBalanceLabel" Text="{Binding CurrentBalance}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Reconciled Balance:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="reconciledBalanceLabel" Text="{Binding ReconciledBalance}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Low Balance Warning:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="lowBalanceWarningLabel" Text="{Binding LowBalanceWarning}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Created:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="createdLabel" Text="{Binding Created}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                    <Label Text="Household Id:" Style="{StaticResource labelStyle}" />
+                    <ContentView Style="{StaticResource fieldView}">
+                        <Label x:Name="householdIdLabel" Text="{Binding HouseholdId}" Style="{StaticResource fieldStyle}" />
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
