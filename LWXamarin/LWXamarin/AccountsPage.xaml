@@ -51,7 +51,6 @@
                     </StackLayout>
                 </StackLayout>
 
-
                 <ListView x:Name="MyAccountView"
                     ItemsSource="{Binding Accounts}"
                     ItemTapped="Handle_ItemTapped"

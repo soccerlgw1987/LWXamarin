@@ -74,33 +74,33 @@
                     
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label Text="Id:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding Id}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}" />
-                                <Label Text="Name:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding Name}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text="Description:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding Decscription}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text="Created:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding Created}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text="Updated:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding Updated}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text="Income Amount:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding IncomeAmount}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text="Current Budget Amount:" Style="{DynamicResource ListItemTextStyle}" />
-                                <Label Text="{Binding CurrentBudgetAmount}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text="{Binding .}" 
-                                    Style="{DynamicResource ListItemDetailTextStyle}"/>
-                            </StackLayout>
-                        </ViewCell>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Id}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}" />
+                                    <Label Text="Name:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Name}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Description:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Decscription}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Created:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Created}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Updated:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding Updated}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Income Amount:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding IncomeAmount}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="Current Budget Amount:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="{Binding CurrentBudgetAmount}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text="{Binding .}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                </StackLayout>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                          
