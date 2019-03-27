@@ -5,8 +5,8 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="#a8a8a8" />
-                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="Medium" />
             </Style>
             <Style x:Key="fieldStyle" TargetType="Label">
                 <Setter Property="TextColor">
@@ -25,7 +25,7 @@
             <StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
-                        <Label Text="Search by Account Id" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+                        <Label Text="Search by Account Id" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
                         <Label x:Name="accountIdLabel" Text="Account Id" Style="{StaticResource labelStyle}" />
                         <Entry x:Name="accountIdEntry" />
                     </StackLayout>

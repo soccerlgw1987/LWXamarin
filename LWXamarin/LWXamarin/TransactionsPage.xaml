@@ -5,8 +5,8 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="#a8a8a8" />
-                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="Medium" />
             </Style>
             <Style x:Key="fieldStyle" TargetType="Label">
                 <Setter Property="TextColor">
@@ -50,43 +50,44 @@
                 <ListView x:Name="MyTransactionView"
                     ItemsSource="{Binding Transactions}"
                     ItemTapped="Handle_ItemTapped"
-                    CachingStrategy="RecycleElement">
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="true">
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Id:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Id}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}" />
-                                    <Label Text="Name:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Name:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Name}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Type:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Type:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Type}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Created:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Created:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Created}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Updated:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Updated:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Updated}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Amount:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Amount:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Amount}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Reconciled Amount:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Reconciled Amount:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding ReconciledAmount}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Reconciled:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Reconciled:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Reconciled}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Account Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Account Id:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding AccountId}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Budget Item Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Budget Item Id:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding BudgetItemId}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Entered By Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Entered By Id:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding EnteredById}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
                                     <Label Text="{Binding .}" 

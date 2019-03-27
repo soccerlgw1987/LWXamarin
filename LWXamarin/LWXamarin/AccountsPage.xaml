@@ -5,8 +5,8 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="#a8a8a8" />
-                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="Medium" />
             </Style>
             <Style x:Key="fieldStyle" TargetType="Label">
                 <Setter Property="TextColor">
@@ -54,34 +54,35 @@
                 <ListView x:Name="MyAccountView"
                     ItemsSource="{Binding Accounts}"
                     ItemTapped="Handle_ItemTapped"
-                    CachingStrategy="RecycleElement">
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="true">
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Id:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Id}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}" />
-                                    <Label Text="Name:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Name:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Name}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Initial Balance:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Initial Balance:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding InitialBalance}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Current Balance:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Current Balance:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding CurrentBalance}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Reconciled Balance:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Reconciled Balance:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding ReconciledBalance}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Low Balance Warning:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Low Balance Warning:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding LowBalanceWarning}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Created:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Created:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding Created}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                    <Label Text="Household Id:" Style="{DynamicResource ListItemTextStyle}" />
+                                    <Label Text="Household Id:" Style="{StaticResource labelStyle}" />
                                     <Label Text="{Binding HouseholdId}" 
                                         Style="{DynamicResource ListItemDetailTextStyle}"/>
                                     <Label Text="{Binding .}" 
